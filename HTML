@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda DK: Tu mejor opción para zapatillas modernas y de alta calidad.">
+    <title>Tienda DK | Venta de Zapatillas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    
+    <header>
+        <img src="C:\Users\USUARIO\Downloads\D.png" alt="Logo de Tienda DK" class="logo"> 
+        
+        <nav>
+            <a href="#inicio">INICIO</a>
+            <a href="#productos">ZAPATILLAS</a>
+            <a href="#perfil">MI PERFIL</a>
+            <a href="#contacto">CONTACTO</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="inicio" class="hero">
+            <h1>Bienvenidos a la Tienda DK</h1>
+            <h2>Encuentra el par perfecto para tu estilo.</h2>
+            <p>Explora nuestra colección de zapatillas, donde la tecnología y el diseño se unen.</p>
+        </section>
+
+        <section id="productos">
+            <h2>Nuestras Zapatillas Destacadas</h2>
+            <div class="grid-productos">
+                <div class="producto-card">
+                    <img src="C:\Users\USUARIO\OneDrive\Desktop\AVJS\TAREAS DE LA U CICLO 5\videos para HTML\194502193015_1_20240130120000-mrtPeru.jpg" alt="Zapatilla para mujer">
+                    <h3>Dunk Low</h3>
+                    <p>Precio: S/ 549.90</p>
+                    <button>Ver Detalle</button>
+                </div>
+                
+                <div class="producto-card">
+                    <img src="C:\Users\USUARIO\OneDrive\Desktop\AVJS\TAREAS DE LA U CICLO 5\videos para HTML\195866313514_1_20240131120000-mrtPeru.jgp.webp" alt="Zapatilla para mujer">
+                    <h3>Air Force 1 '07</h3>
+                    <p>Precio: S/ 549.90</p>
+                    <button>Ver Detalle</button>
+                </div>
+                
+                <div class="producto-card">
+                    <img src="C:\Users\USUARIO\OneDrive\Desktop\AVJS\TAREAS DE LA U CICLO 5\videos para HTML\198480160441_1_20250912-mrtPeru.jpg" alt="Zapatilla de hombre">
+                    <h3>Air Jordan 5 fire Red</h3>
+                    <p>Precio: S/ 999.90</p>
+                    <button>Ver Detalle</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="C:\Users\USUARIO\OneDrive\Desktop\AVJS\TAREAS DE LA U CICLO 5\videos para HTML\198486695879_1_20250724-mrtPeru.jpg" alt="Zapatilla para mujer">
+                    <h3>Air Jordan 3 Retro</h3>
+                    <p>Precio: S/ 899.90</p>
+                    <button>Ver Detalle</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="C:\Users\USUARIO\OneDrive\Desktop\AVJS\TAREAS DE LA U CICLO 5\videos para HTML\198480637424_1_20250403-mrtPeru.jpg" alt="Zapatilla chimpunes de futbol FG de corte bajo">
+                    <h3>Mercurial Vapor 16 Elite</h3>
+                    <p>Precio: S/ 1,249.90</p>
+                    <button>Ver Detalle</button>
+                </div>
+
+                <div class="producto-card">
+                    <img src="C:\Users\USUARIO\OneDrive\Desktop\AVJS\TAREAS DE LA U CICLO 5\videos para HTML\197862770766_1_20250326-mrtPeru.jpg" alt="Zapatilla de entramnamiento para mujer">
+                    <h3>Free Metcon 6 SE</h3>
+                    <p>Precio: S/ 619.90</p>
+                    <button>Ver Detalle</button>
+                </div>
+
+                </div>
+        </section>
+
+        <section id="multimedia">
+            <h2>Videos Promocionales</h2>
+    
+            <div class="media-content">
+                <div class="video-responsive">
+                    <iframe 
+                        width="640" 
+                        height="360" 
+                        src="https://www.youtube.com/embed/fFnXvKFcrIY" 
+                        title="Video de YouTube promocional" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="perfil" class="perfil-personal">
+            <h2>Hola, Soy Daniel - Creador de DK</h2>
+            <img src="C:\Users\USUARIO\Downloads\perfil.png" alt="Mi foto" class="foto-perfil">
+            <p class="descripcion">Estudiante de la UTP, apasionado por la tecnología y el buen diseño de calzado.</p>
+            <h3>Mis intereses:</h3>
+            <ul>
+                <li>Programar</li>
+                <li>Jugar videojuegos</li>
+                <li>Ver animes</li>
+                <li>Ver películas</li>
+            </ul>
+            <a href="https://github.com/Daniel-DK6/Proyecto-Taller-de-Programaci-n-Web.git" target="_blank">Mi GitHub</a>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form action="/procesar-formulario" method="POST" class="formulario-tienda">
+                <input type="text" name="nombre" placeholder="tu nombre" required>
+                <input type="email" name="email" placeholder="@gmail.com" required>
+                <input type="tel" name="telefono" pattern="[0-9]{9}" placeholder="numero de celular" required>
+                <textarea name="mensaje" rows="5" placeholder="Tu mensaje aquí... (consulta, pedido, etc.)"></textarea>
+                
+                <select name="asunto">
+                    <option value="">Selecciona un asunto</option>
+                    <option value="consulta">Consulta sobre pedido</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="queja">Queja/Reclamo</option>
+                </select>
+
+                <label>
+                    <input type="checkbox" name="newsletter"> Suscribirse a ofertas
+                </label>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda DK | <a href="privacidad.html">Política de Privacidad</a></p>
+    </footer>
+
+</body>
+</html>
