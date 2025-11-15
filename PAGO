@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Tienda DK</title>
+    <link rel="stylesheet" href="estilos.css"> 
+</head>
+<body>
+
+    <main>
+        
+                <section id="checkout-form" class="formulario-tienda"> 
+            <h1>Confirmar tu Pedido</h1>
+            
+            <div id="resumen-pedido">
+                <p>Cargando detalles del pedido...</p>
+            </div>
+            
+                        <form id="formulario-pago" action="/procesar-pedido" method="POST" class="formulario-tienda"> 
+                <h2>Información de Envío</h2>
+                <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <input type="tel" name="telefono" pattern="[0-9]{9}" placeholder="Teléfono (9 dígitos)" required>
+                <input type="text" name="direccion" placeholder="Dirección de Envío" required>
+                
+                <input type="hidden" id="producto-input" name="producto_json"> 
+                
+                <button type="submit">Finalizar Compra y Pagar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda DK | <a href="privacidad.html">Política de Privacidad</a></p>
+    </footer>
+
+    <script>
+        const resumenDiv = document.getElementById('resumen-pedido');
+        const productoInput = document.getElementById('producto-input');
+
+        const productoGuardado = localStorage.getItem('productoPedido');
+
+        if (productoGuardado) {
+            const producto = JSON.parse(productoGuardado);
+            
+            resumenDiv.innerHTML = `
+                <div class="resumen-item">
+                    <p>🛍️ **Producto Seleccionado:** **${producto.nombre}**</p>
+                    <p>💰 **Precio Total:** S/ ${producto.precio.toFixed(2)}</p>
+                </div>
+            `;
+            
+            productoInput.value = productoGuardado;
+
+        } else {
+            resumenDiv.innerHTML = '<p class="alerta">⚠️ Error: No se ha seleccionado ningún producto. Vuelve al <a href="index.html">Inicio</a>.</p>';
+        }
+    </script>
+</body>
+</html>
